@@ -1,7 +1,8 @@
 
-import {madstate} from "../toolbox/madstate/madstate.js"
+import {madstate} from "../../../toolbox/madstate/madstate.js"
 
 export function makeCounterModel() {
+
 	const state = madstate({
 		count: 0,
 	})

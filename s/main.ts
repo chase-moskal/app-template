@@ -2,15 +2,15 @@
 import {mixinShare, registerComponents, themeComponents} from "xiome/x/framework/component/component.js"
 
 import theme from "./common/theme.css.js"
-import {makeCounterModel} from "./models/my-counter.js"
-import {MyExample} from "./components/my-example/my-example.js"
 import {mixinMadstateSubscriptions} from "./toolbox/madstate/mixin-madstate.js"
+import {makeCounterModel} from "./features/example-counting/models/counter-model.js"
+import {MyCounter} from "./features/example-counting/components/my-counter/my-counter.js"
 
 const counter = makeCounterModel()
 
 registerComponents(themeComponents(theme, {
-	MyExample:
+	MyCounter:
 		mixinMadstateSubscriptions(counter.subscribe)(
-			mixinShare({counter})(MyExample)
+			mixinShare({counter})(MyCounter)
 		),
 }))
