@@ -1,7 +1,8 @@
 
+import theme from "./common/theme.css.js"
 import {MyExample} from "./components/my-example/my-example.js"
-import {registerComponents} from "xiome/x/framework/component/register-components.js"
+import {registerComponents, themeComponents} from "xiome/x/framework/component/component.js"
 
-registerComponents({
+registerComponents(themeComponents(theme, {
 	MyExample,
-})
+}))
