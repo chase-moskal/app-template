@@ -1,0 +1,23 @@
+{
+	"name": "app-template",
+	"version": "0.0.0-dev.0",
+	"description": "a webdev template for modern projects",
+	"scripts": {
+		"build": "tsc",
+		"test": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chase-moskal/app-template.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/chase-moskal/app-template/issues"
+	},
+	"homepage": "https://github.com/chase-moskal/app-template#readme",
+	"devDependencies": {
+		"typescript": "^4.4.3"
+	}
+}
