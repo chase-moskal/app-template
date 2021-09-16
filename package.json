@@ -4,6 +4,7 @@
 	"description": "a webdev template for modern projects",
 	"scripts": {
 		"build": "tsc",
+		"start": "serve",
 		"test": ""
 	},
 	"repository": {
@@ -18,6 +19,7 @@
 	},
 	"homepage": "https://github.com/chase-moskal/app-template#readme",
 	"devDependencies": {
+		"serve": "^12.0.1",
 		"typescript": "^4.4.3"
 	}
 }
