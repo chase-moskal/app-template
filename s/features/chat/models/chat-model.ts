@@ -7,11 +7,6 @@ export function makeChatModel() {
   });
 
   function postMessage(e) {
-    console.log(
-      state.writable.messages.map((message) => {
-        message;
-      })
-    );
     let inputValue = e.target.parentNode.querySelector('.input').value;
     let myName = (state.writable.myName =
       e.target.parentNode.parentNode.querySelector('.myName'));
