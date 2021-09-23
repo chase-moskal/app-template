@@ -1,13 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel=stylesheet href="/s/styles.css"/>
-		<script type=importmap-shim src="/x/importmap.json"></script>
-		<script type=module-shim src="/x/main.js"></script>
-		<script defer src="/node_modules/es-module-shims/dist/es-module-shims.js"></script>
-	</head>
+  <head>
+    <link rel="stylesheet" href="/s/styles.css" />
+    <script type="importmap-shim" src="/x/importmap.json"></script>
+    <script type="module-shim" src="/x/main.js"></script>
+    <script
+      defer
+      src="/node_modules/es-module-shims/dist/es-module-shims.js"
+    ></script>
+  </head>
 </html>
 <body>
-	<p>app-template</p>
-	<my-counter></my-counter>
+  <p>app-template</p>
+
+  <h1>chat-box</h1>
+  <div class="flex">
+    <chat-box></chat-box>
+    <chat-box></chat-box>
+  </div>
 </body>

@@ -1,12 +1,21 @@
-
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	padding: 1em;
-	background: #222;
-	color: #888;
+  padding: 1em;
+  background: #222;
+  color: #888;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+p {
+  text-align: center;
 }
