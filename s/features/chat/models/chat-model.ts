@@ -1,38 +1,21 @@
-import { madstate } from '../../../toolbox/madstate/madstate.js';
+
+import {madstate} from '../../../toolbox/madstate/madstate.js';
 
 export function makeChatModel() {
-  const state = madstate({
-    messages: [] as string[],
-    myName: '' as string,
-  });
+	const state = madstate({
+		messages: [] as string[],
+	})
 
-  function postMessage(e) {
-    let inputValue = e.target.parentNode.querySelector('.input').value;
-    let myName = (state.writable.myName =
-      e.target.parentNode.parentNode.querySelector('.myName'));
-    let messages = `${myName.textContent}: ${inputValue}`;
-    if (inputValue !== '') {
-      state.writable.messages = [...state.writable.messages, messages];
-    }
-    e.target.parentNode.querySelector('.input').value = '';
-  }
-  function yourName(e) {
-    let myName = (state.writable.myName =
-      e.target.parentNode.parentNode.querySelector('.myName'));
-    let inputName = e.target.parentNode.querySelector('.name').value;
-    myName = e.target.parentNode.parentNode.querySelector('.myName');
-    myName.textContent = inputName;
-    if (myName.textContent !== '') {
-      e.target.parentNode.style.display = 'none';
-      e.target.parentNode.parentNode.querySelector('.show').style.display =
-        'flex';
-    }
-  }
+	function postMessage(message: string) {
+		state.writable.messages = [
+			...state.readable.messages,
+			message,
+		]
+	}
 
-  return {
-    state: state.readable,
-    postMessage,
-    yourName,
-    subscribe: state.subscribe,
-  };
+	return {
+		state: state.readable,
+		subscribe: state.subscribe,
+		postMessage,
+	}
 }
